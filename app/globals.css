@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 160 10% 97%;
+  --foreground: 150 11% 12%;
+  --surface: 0 0% 100%;
+  --muted: 110 8% 92%;
+  --muted-foreground: 156 8% 36%;
+  --border: 120 14% 88%;
+  --primary: 90 58% 52%;
+  --primary-foreground: 150 14% 9%;
+  --accent: 160 62% 39%;
+  --accent-soft: 86 79% 79%;
+  --coral: 7 83% 65%;
+  --success: 145 48% 36%;
+  --warning: 41 74% 49%;
+  --danger: 0 72% 60%;
+}
+
+.dark {
+  --background: 150 9% 6%;
+  --foreground: 50 20% 96%;
+  --surface: 150 10% 11%;
+  --muted: 140 9% 15%;
+  --muted-foreground: 150 9% 66%;
+  --border: 150 12% 19%;
+  --primary: 86 86% 67%;
+  --primary-foreground: 150 8% 7%;
+  --accent: 160 67% 56%;
+  --accent-soft: 145 45% 26%;
+  --coral: 10 100% 72%;
+  --success: 145 64% 62%;
+  --warning: 42 85% 68%;
+  --danger: 0 92% 72%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), sans-serif;
+}
+
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
