@@ -1,6 +1,14 @@
 # MAVORA
 
-MAVORA is a production-oriented creator-brand collaboration platform built with Next.js, TypeScript, Tailwind, Prisma, and Supabase.
+MAVORA is a premium global creator-brand collaboration platform for creators, brands, agencies, and platform teams.
+
+## Goals
+
+- Creator discovery and campaign pipeline management
+- Brand collaboration workflows and CRM-like tooling
+- Social analytics and media kit publishing
+- Payment flows, storage, and job orchestration
+- Secure onboarding and role-based access controls
 
 ## Stack
 
@@ -8,36 +16,28 @@ MAVORA is a production-oriented creator-brand collaboration platform built with 
 - TypeScript
 - Tailwind CSS
 - Prisma ORM
-- Supabase Auth + Storage
 - PostgreSQL
-- React Hook Form + Zod
+- Supabase Auth and Storage
 - TanStack Query
 - Framer Motion
+- Recharts
 
-## Local development
+## Project shape
+
+- app/ marketing, auth, onboarding, dashboards, public pages
+- components/ reusable design system primitives and sections
+- lib/ shared config and service utilities
+- prisma/ database schema and migrations
+- docs/ architecture and deployment notes
+
+## Local setup
 
 1. Copy `.env.example` to `.env.local`
-2. Install dependencies: `npm install`
+2. Install dependencies with `npm install`
 3. Generate Prisma client: `npx prisma generate`
 4. Run migrations: `npx prisma migrate dev`
-5. Start the app: `npm run dev`
+5. Start development server: `npm run dev`
 
-## Production checklist
+## Production readiness
 
-- Configure `NEXT_PUBLIC_APP_URL`
-- Add Supabase credentials
-- Add Stripe or payment provider credentials
-- Set secure auth cookies
-- Configure storage buckets
-- Add job queue provider
-- Run `npm run build`
-
-## Brand identity
-
-- Name: MAVORA
-- Tagline: Create Together. Grow Everywhere.
-- Theme: Premium Aurora / Obsidian editorial SaaS look
-
-## Notes
-
-This repository is intentionally scaffolded as a real application baseline and is suitable for production extension with additional creator, brand, onboarding, campaign, and admin flows.
+This repository is structured as a launch-ready foundation for a full creator economy SaaS and is intended to be extended with real Auth, payments, campaign orchestration, storage policies, job workers, and analytics integrations.
